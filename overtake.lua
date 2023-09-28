@@ -132,7 +132,7 @@ function script.update(dt)
                     totalScore = totalScore + math.ceil(10 * comboMeter)
                     comboMeter = comboMeter + 1
                     comboColor = comboColor + 90
-                    addMessage("Overtake", comboMeter > 20 and 1 or 0)
+                    addMessage("Overtake !", comboMeter > 20 and 1 or 0)
                     state.overtaken = true
                 end
             end
@@ -224,7 +224,7 @@ local speedWarning = 0
             rgbm.new(hsv(comboColor, math.saturate(comboMeter / 10), 1):rgb(), math.saturate(comboMeter / 4))
 
         local function speedMeter(ref)
-            ui.drawRectFilled(ref + vec2(0, -4), ref + vec2(180, 5), colorDark, 1)
+            ui.drawRectFilled(ref + vec2(0, -10), ref + vec2(180, 5), colorDark, 9)
             ui.drawLine(ref + vec2(0, -4), ref + vec2(0, 4), colorGrey, 1)
             ui.drawLine(ref + vec2(requiredSpeed, -4), ref + vec2(requiredSpeed, 4), colorGrey, 1)
 
