@@ -225,12 +225,12 @@ local speedWarning = 0
 
         local function speedMeter(ref)
             ui.drawRectFilled(ref + vec2(0, -10), ref + vec2(180, 5), colorDark, 9)
-            ui.drawLine(ref + vec2(0, -4), ref + vec2(0, 4), colorGrey, 1)
-            ui.drawLine(ref + vec2(requiredSpeed, -4), ref + vec2(requiredSpeed, 4), colorGrey, 1)
+            --ui.drawLine(ref + vec2(0, -4), ref + vec2(0, 4), colorGrey, 1)
+            ui.drawLine(ref + vec2(requiredSpeed, -10), ref + vec2(requiredSpeed, 4), colorGrey, 1)
 
             local speed = math.min(ac.getCarState(1).speedKmh, 180)
             if speed > 1 then
-                ui.drawLine(ref + vec2(0, 0), ref + vec2(speed, 0), colorAccent, 4)
+                ui.drawLine(ref + vec2(2, -2), ref + vec2(speed, 0), colorAccent, 9)
             end
         end
 
