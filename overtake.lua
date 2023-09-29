@@ -230,7 +230,7 @@ local speedWarning = 0
 
             local speed = math.min(ac.getCarState(1).speedKmh, 180)
             if speed > 1 then
-                ui.drawLine(ref + vec2(2, -2), ref + vec2(speed, 0), colorAccent, 9)
+                ui.drawLine(ref + vec2(-2, 0), ref + vec2(speed, 0), colorAccent, 9)
             end
         end
 
